@@ -1,0 +1,20 @@
+<% include partials/header %>
+<h1><%=header%></h1>
+<h3>add user</h3>
+<form method="post" action="users/add">
+    <label >NAME</label>
+    <input type="text" name="names"><hr>
+    <label >Email</label>
+    <input type="email" name="email"><hr>
+    <label >Age</label>
+    <input type="number" name="age"><hr>
+    <input type="submit" name="submit" value="submit">
+</form>
+<ul>
+    <% users.forEach(function(user){%>
+        <li><%=user.name%></li>
+        <li><%=user.email%></li>
+        <li><%=user.age%></li>
+    <%})%>
+</ul>
+<% include partials/footer %>
